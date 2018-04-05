@@ -1,0 +1,80 @@
+{
+	"name": "vscode-bettercoder",
+	"displayName": "BetterCoder Keymaps",
+	"description": "Shortcuts to improve code speed.",
+	"version": "1.0.0",
+	"publisher": "Luís Ferreira",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ljmf00/vscode-bettercoder.git"
+	},
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"categories": [
+		"Keymaps"
+	],
+	"activationEvents": [
+		"onCommand:bettercoder.cursorBlockStartUp",
+		"onCommand:bettercoder.cursorBlockEndDown",
+		"onCommand:bettercoder.cursorBlockStartUpSelect",
+		"onCommand:bettercoder.cursorBlockEndDownSelect"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "bettercoder.cursorBlockStartUp",
+				"title": "BetterCoder: Move Block Up"
+			},
+			{
+				"command": "bettercoder.cursorBlockEndDown",
+				"title": "BetterCoder: Move Block Down"
+			},
+			{
+				"command": "bettercoder.cursorBlockStartUpSelect",
+				"title": "BetterCoder: Select Block Up"
+			},
+			{
+				"command": "bettercoder.cursorBlockEndDownSelect",
+				"title": "BetterCoder: Select Block Down"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "bettercoder.cursorBlockStartUp",
+				"key": "ctrl+up",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "bettercoder.cursorBlockEndDown",
+				"key": "ctrl+down",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "bettercoder.cursorBlockStartUpSelect",
+				"key": "ctrl+shift+up",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "bettercoder.cursorBlockEndDownSelect",
+				"key": "ctrl+shift+down",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.0.3",
+		"vscode": "^1.1.14",
+		"mocha": "^2.3.3",
+		"@types/node": "^6.0.40",
+		"@types/mocha": "^2.2.32"
+	}
+}
