@@ -2,7 +2,7 @@
 	"name": "vscode-bettercoder",
 	"displayName": "BetterCoder Keymaps",
 	"description": "Shortcuts to improve code speed.",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"publisher": "ljmf00",
 	"license": "MIT",
 	"repository": {
@@ -134,7 +134,18 @@
 				"key": "ctrl+k ctrl+shift+f",
 				"command": "editor.action.format"
 			}
-		]
+		],
+		"configuration": {
+			"type": "object",
+			"title": "BetterCoder configurations",
+			"properties": {
+				"bettercoder.deleteTabEnd.keepOneSpace": {
+					"type": "boolean",
+					"default": false,
+					"description": "Keep one space on deleteTabEnd"
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "tsc -p ./",

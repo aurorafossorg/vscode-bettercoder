@@ -60,7 +60,7 @@ abstract class DeleteTabOperation extends DeleteTab {
 			} else {
 				let lastWordPosition = DeleteBlockOperation.backtraceAboveLine(doc, cursorLineNumber, direction);
 				let a = doc.getText(new Range((direction) ? lastWordPosition.translate(0, 1) : lastWordPosition.translate(0, -1), lastWordPosition));
-				let isKeepOneSpace = DeleteTab.getSetting("bettercoder.deleteEnd.keepOneSpace") &&
+				let isKeepOneSpace = DeleteTab.getSetting("bettercoder.deleteTabEnd.keepOneSpace") &&
 					// For better UX ?
 					// Don't add space if current line is empty
 					!cursorLine.isEmptyOrWhitespace &&
