@@ -2,7 +2,7 @@
 	"name": "vscode-bettercoder",
 	"displayName": "BetterCoder Keymaps",
 	"description": "Shortcuts to improve code speed.",
-	"version": "1.1.3",
+	"version": "1.2.0",
 	"publisher": "ljmf00",
 	"license": "MIT",
 	"repository": {
@@ -101,6 +101,38 @@
 				"command": "bettercoder.deleteTabEndRight",
 				"key": "ctrl+shift+delete",
 				"when": "editorTextFocus"
+			},
+			{
+				"key": "ctrl+alt+`",
+				"command": "workbench.action.terminal.focus"
+			},
+			{
+				"key": "ctrl+shift+numpad_add",
+				"command": "workbench.action.terminal.focusNext"
+			},
+			{
+				"key": "ctrl+shift+numpad_subtract",
+				"command": "workbench.action.terminal.focusPrevious"
+			},
+			{
+				"key": "alt+`",
+				"command": "workbench.action.toggleMaximizedPanel"
+			},
+			{
+				"key": "shift+alt+`",
+				"command": "workbench.action.focusPanel"
+			},
+			{
+				"key": "ctrl+alt+b",
+				"command": "workbench.action.toggleActivityBarVisibility"
+			},
+			{
+				"key": "alt+m",
+				"command": "editor.action.toggleMinimap"
+			},
+			{
+				"key": "ctrl+k ctrl+shift+f",
+				"command": "editor.action.format"
 			}
 		]
 	},
