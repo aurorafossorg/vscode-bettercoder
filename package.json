@@ -5,6 +5,13 @@
 	"version": "1.2.1",
 	"publisher": "ljmf00",
 	"license": "MIT",
+	"keywords": [
+		"productivity",
+		"bettercoder",
+		"shortcuts",
+		"speed",
+		"code"
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ljmf00/vscode-bettercoder.git"
