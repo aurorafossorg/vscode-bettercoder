@@ -45,7 +45,7 @@ export abstract class DeleteBlockOperation {
 		if ((direction) ? backtraceLineNumber < 0 : backtraceLineNumber > doc.lineCount) {
 			return (direction) ? doc.positionAt(doc.getText().length) : new Position(0, 0);
 		} else {
-			 (direction) ? new Position(backtraceLineNumber, doc.lineAt(backtraceLineNumber).firstNonWhitespaceCharacterIndex) : doc.lineAt(backtraceLineNumber).range.end;
+			return (direction) ? new Position(backtraceLineNumber, doc.lineAt(backtraceLineNumber).firstNonWhitespaceCharacterIndex) : doc.lineAt(backtraceLineNumber).range.end;
 		}
 	}
 
