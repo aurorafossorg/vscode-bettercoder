@@ -49,8 +49,8 @@ abstract class DeleteTabOperation extends DeleteTab {
 		const cursorPosition = selection.active;
 		const cursorLineNumber = cursorPosition.line;
 		const cursorLine = doc.lineAt(cursorPosition);
-	
-		let isSmartBackspace = ((direction) ? cursorLineNumber < doc.lineCount : cursorLineNumber > 0) && ((direction) ? (cursorPosition.character != cursorLine.firstNonWhitespaceCharacterIndex) : (cursorPosition.character <= cursorLine.firstNonWhitespaceCharacterIndex));
+
+		let isSmartBackspace = (((direction) ? (cursorLineNumber < doc.lineCount) : (cursorLineNumber > 0)) && ((direction) ? (cursorPosition.character < cursorLine.firstNonWhitespaceCharacterIndex) : (cursorPosition.character <= cursorLine.firstNonWhitespaceCharacterIndex)));
 		if (isSmartBackspace) {
 			let aboveLine = doc.lineAt((direction) ? cursorLineNumber + 1 : cursorLineNumber - 1);
 			let aboveRange = aboveLine.range;

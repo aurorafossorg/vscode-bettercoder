@@ -2,7 +2,7 @@
 	"name": "vscode-bettercoder",
 	"displayName": "BetterCoder Keymaps",
 	"description": "Shortcuts to improve code speed.",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"publisher": "ljmf00",
 	"license": "MIT",
 	"repository": {
