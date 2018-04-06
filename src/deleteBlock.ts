@@ -33,9 +33,10 @@ String.prototype.findLastIndex = function (predicate: (theChar: string) => Boole
 
 export abstract class DeleteBlockOperation {
 	public static backtraceAboveLine(doc: TextDocument, cursorLineNumber: number, direction: boolean): Position {
-		let backtraceLineNumber = (direction) ? cursorLineNumber + 1 : cursorLineNumber - 1;
+		let backtraceLineNumber = (direction) ? cursorLineNumber + 1 : cursorLineNumber - 1; if ((direction) ? (backtraceLineNumber == doc.lineCount) : (backtraceLineNumber == -1))
+			return (direction) ? doc.lineAt(cursorLineNumber).range.end : doc.lineAt(cursorLineNumber).range.start;
 		let empty = true;
-		while (((direction) ? backtraceLineNumber <= doc.lineCount : backtraceLineNumber >= 0) && empty) {
+		while (((direction) ? backtraceLineNumber < doc.lineCount-1 : backtraceLineNumber > 0) && empty) {
 			empty = doc.lineAt(backtraceLineNumber).isEmptyOrWhitespace;
 			if (empty) {
 				(direction) ? backtraceLineNumber++ : backtraceLineNumber--;
