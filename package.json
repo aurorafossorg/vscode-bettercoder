@@ -2,7 +2,7 @@
 	"name": "vscode-bettercoder",
 	"displayName": "BetterCoder Keymaps",
 	"description": "Shortcuts to improve code speed.",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"publisher": "ljmf00",
 	"license": "MIT",
 	"repository": {
@@ -19,7 +19,11 @@
 		"onCommand:bettercoder.cursorBlockStartUp",
 		"onCommand:bettercoder.cursorBlockEndDown",
 		"onCommand:bettercoder.cursorBlockStartUpSelect",
-		"onCommand:bettercoder.cursorBlockEndDownSelect"
+		"onCommand:bettercoder.cursorBlockEndDownSelect",
+		"onCommand:bettercoder.deleteBlockLeft",
+		"onCommand:bettercoder.deleteBlockRight",
+		"onCommand:bettercoder.deleteTabEndLeft",
+		"onCommand:bettercoder.deleteTabEndRight"
 	],
 	"main": "./out/src/extension",
 	"contributes": {
@@ -39,6 +43,22 @@
 			{
 				"command": "bettercoder.cursorBlockEndDownSelect",
 				"title": "BetterCoder: Select Block Down"
+			},
+			{
+				"command": "bettercoder.deleteBlockLeft",
+				"title": "BetterCoder: Delete Block Left"
+			},
+			{
+				"command": "bettercoder.deleteBlockRight",
+				"title": "BetterCoder: Delete Block Right"
+			},
+			{
+				"command": "bettercoder.deleteTabEndLeft",
+				"title": "BetterCoder: Delete Left End in same Tab"
+			},
+			{
+				"command": "bettercoder.deleteTabEndRight",
+				"title": "BetterCoder: Delete Right End in same Tab"
 			}
 		],
 		"keybindings": [
@@ -60,6 +80,26 @@
 			{
 				"command": "bettercoder.cursorBlockEndDownSelect",
 				"key": "ctrl+shift+down",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "bettercoder.deleteBlockLeft",
+				"key": "ctrl+backspace",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "bettercoder.deleteBlockRight",
+				"key": "ctrl+delete",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "bettercoder.deleteTabEndLeft",
+				"key": "ctrl+shift+backspace",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "bettercoder.deleteTabEndRight",
+				"key": "ctrl+shift+delete",
 				"when": "editorTextFocus"
 			}
 		]
