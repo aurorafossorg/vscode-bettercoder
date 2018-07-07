@@ -31,9 +31,6 @@ For more info about intellectual property visit: aurorafoss.org or
 directly send an email to: contact (at) aurorafoss.org .
 */
 
-// Copyright (c) 2017 Justin Firth
-// Copyright (c) 2018 Luís Ferreira
-
 // Copyright (c) 2017 Jason Liu
 // Copyright (c) 2018 Luís Ferreira
 
